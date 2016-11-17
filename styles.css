@@ -1,0 +1,245 @@
+@media (max-width: 1000px) {
+    .navbar-header {
+        float: none;
+    }
+    .navbar-left,.navbar-right {
+        float: none !important;
+    }
+    .navbar-toggle {
+        display: block;
+    }
+    .navbar-collapse {
+        border-top: 1px solid transparent;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+    }
+    .navbar-fixed-top {
+        top: 0;
+        border-width: 0 0 1px;
+    }
+    .navbar-collapse.collapse {
+        display: none!important;
+    }
+    .navbar-nav {
+        float: none!important;
+        margin-top: 7.5px;
+    }
+    .navbar-nav>li {
+        float: none;
+    }
+    .navbar-nav>li>a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .collapse.in{
+        display:block !important;
+    }
+}
+
+.navbar-inverse .navbar-nav>li>a {
+    color: #fff;
+}
+
+.navbar-inverse .navbar-nav>li>a:hover {
+    color: #970001;
+}
+
+.navbar-inverse .navbar-brand {
+    color: #fff;
+}
+
+.navbar-inverse .navbar-brand:hover {
+    color: #970001;
+}
+
+#slideshow { 
+    margin: 0px auto; 
+    position: relative; 
+    width: 100%; 
+    height: 100%px; 
+    padding: 0px; 
+    
+}
+
+#slideshow > div { 
+    position: absolute; 
+    top: 0px; 
+    left: 0px; 
+    right: 0px; 
+    bottom: 0px; 
+}
+
+//Customs
+#main-body1{
+     //background: url(2.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+
+/*#main {
+    margin: 50px;
+    height: 100%;
+    background-color: #ffffff;
+    border: 1px solid black;
+    opacity: 1.0;
+    filter: alpha(opacity=80);
+}*/
+
+.inside-r2{
+     position: relative;
+    margin-left: auto;
+    margin-right: 10%;
+    margin-left: 10%;
+    margin-top: 5em;
+    width: 80%;
+    //height: 5em;
+    display: block;
+    background: rgba(250, 250, 250, .8); 
+    z-index: 1;
+    color: #222;
+    border: 5px solid rgba(192, 146, 77, .6);
+}
+
+#main{
+    position: relative;
+    margin-left: auto;
+    left: 0;
+    margin-right: 10%;
+    margin-left: 10%;
+    margin-top: 5em;
+    
+    width: 80%;
+    height: 80%;
+    display: block;
+    background: rgba(250, 250, 250, .9); 
+    z-index: 1;
+    color: #970001;
+    border: 15px solid transparent;
+    //-webkit-border-image: url(assets/images/background/border.png) 30% round; /* Safari 3.1-5 */
+    //-o-border-image: url(assets/images/background/border.png) 30% round; /* Opera 11-12.1 */
+    //border-image: url(assets/images/background/border.png) 30% round;
+
+    padding-top: 20px
+    padding-left: 20px
+}
+
+
+
+#view-data{
+    position: absolute;
+    z-index: 2;
+}
+
+#contacts{
+     position: relative;
+    -webkit-animation-name: cont; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 2s; /* Safari 4.0 - 8.0 */
+    animation-name: cont;
+    animation-duration: 2s;
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes cont {
+    0%   {left:-100px; top:0px;}
+  
+    100% {left:0px; top:0px;}
+}
+
+/* Standard syntax */
+@keyframes cont {
+   0%   {left:-100px; top:0px;}
+ 
+    100% {left:0px; top:0px;}
+}
+
+
+//titleand sub titles
+.mu-title {
+  display: inline;
+  float: left;
+  width: 100%;
+  margin-bottom: 10px;
+  
+  text-align: center;
+}
+.mu-title .mu-subtitle {
+  font-size: 50px;
+  margin-top: 20px;
+  font-family: "Tangerine", cursive;
+  line-height: 30px;
+}
+.mu-title h2 {
+  color: #000;
+  font-size: 35px;
+  margin-bottom: 5px;
+}
+.mu-title i {
+  font-size: 18px;
+}
+.mu-title .mu-title-bar {
+  position: relative;
+}
+.mu-title .mu-title-bar::before {
+  content: "";
+  height: 2px;
+  left: 8px;
+  position: absolute;
+  top: 10px;
+  width: 100px;
+}
+.mu-title .mu-title-bar::after {
+  content: "";
+  height: 2px;
+  right: 15px;
+  position: absolute;
+  top: 10px;
+  width: 100px;
+}
+
+
+.mu-title {
+    margin-bottom: 0;
+}
+.mu-title h2 {
+    font-size: 28px;
+}
+
+#about-us-pics{
+    position: relative;
+    height: 480px;
+}
+
+.data-row{
+    margin-bottom: 20px;
+}
+
+.heading-row{
+    margin-bottom: 20px;
+}
+
+
+//Bootstrap Overrides
+.navbar {
+    margin-bottom: 0px !important;
+}
+
+body {
+//background: url(2.jpg) no-repeat center center fixed;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+z-index: -1;
+ 
+}
+
+#app-data{
+      position: absolute;
+    z-index: 3;
+}
+
+#about-text{
+    margin: 10px 20px;
+}

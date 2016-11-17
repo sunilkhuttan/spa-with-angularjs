@@ -1,11 +1,115 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Hello Coursera</title>
-  </head>
-  <body>
-    <h1>Hello World. This is my first SPA using Angular JS</h1>
-    <h2>Hello World. This is my first SPA using Angular JS</h2>
-  </body>
+
+<!-- define angular app -->
+<html ng-app="scotchApp">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <!-- SPELLS -->
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
+  <script src="script.js"></script>
+  <script src="customScript.js"></script>
+</head>
+
+<!-- define angular controller -->
+<body ng-controller="mainController" id="main-body1">
+
+  <nav class="navbar navbar-inverse custom-navbar" style="margin-bottom: 0px;" role="navigation">
+    <div class="container">
+      <div class="navbar-header pull-left">
+        <a class="navbar-brand" href="/">The Gulmohar Restaurant</a>
+      </div>
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>    
+      </div>
+
+      <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav pull-right">
+          <li><a href="#"><i class="fa fa-home"></i> Home</a></li>
+          <li><a href="#about"><i class="fa fa-shield"></i> About</a></li>
+          <li><a href="#menu"><i class="fa fa-shield"></i> Menu</a></li>
+          <li><a href="#reservation"><i class="fa fa-shield"></i> Reservation</a></li>
+          <li><a href="#gallery"><i class="fa fa-shield"></i> Gallery</a></li>
+          <li><a href="#team"><i class="fa fa-shield"></i> Our Team</a></li>
+          <li><a href="#contact"><i class="fa fa-comment"></i> Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- <div class="row" id="sliesh" style="height: 100%; width: 100%;"> -->
+       <!-- angular templating -->
+      <!-- this is where content will be injected -->
+
+     <div class="abs" id="main" ng-view>   
+      
+    </div>
+
+     <div class="inside-r2">
+      <div class="row" style="padding: 10px;">
+        <div class="col-md-4" id="contacts" >
+          <span class="glyphicon glyphicon-earphone" aria-hidden="true"></span> <label>09 21154485</label><br/>
+          <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> <label>khush@abc.com</label>
+          
+        </div>     
+        <div class="col-md-4">
+          <span class="glyphicon glyphicon-earphone" aria-hidden="true"></span> <label>09 21154485</label><br/>
+          <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> <label>khush@abc.com</label>
+        </div>     
+        <div class="col-md-4">
+          <span class="glyphicon glyphicon-earphone" aria-hidden="true"></span> <label>09 21154485</label><br/>
+          <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> <label>khush@abc.com</label>
+        </div> 
+      </div>
+      
+    </div>
+   
+
+
+     
+ <!--  </div> -->
+
+
+  <br/>
+
+ 
+ 
+
+  
+  <script>
+   $("#slideshow > div:gt(0)").hide();
+
+setInterval(function() { 
+  $('#slideshow > div:first')
+    .fadeOut(500)
+    .next()
+    .fadeIn(500)
+    .end()
+    .appendTo('#slideshow');
+},  3000);
+  </script>
+  
+<!--   <footer class="text-center">
+    <p>View the tutorial on <a href="http://scotch.io/tutorials/javascript/single-page-apps-with-angularjs-routing-and-templating">Scotch.io</a></p>
+  
+    <p>View a tutorial on <a href="http://scotch.io/tutorials/javascript/animating-angularjs-apps-ngview">Animating Your Angular Single Page App</a></p>
+  </footer>  -->
+  
+</body>
+
 </html>
