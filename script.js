@@ -55,7 +55,31 @@
 	});
 
 	scotchApp.controller('aboutController', function($scope) {
+
 		$scope.message = 'Look! I am an about page.';
+		$(function () {
+		    var aboutUsDiv = $('#about-us-pics');
+		    var backgrounds = [
+		      'url(assets/images/about-us/1.jpg)', 
+		      'url(assets/images/about-us/2.png)',
+		      'url(assets/images/about-us/3.jpg)',
+		      'url(assets/images/about-us/4.jpg)',
+		      'url(assets/images/about-us/5.jpg)',
+		      'url(assets/images/about-us/6.jpg)',
+		      'url(assets/images/about-us/8.jpg)',
+		      'url(assets/images/about-us/7.jpg)'];
+		    var current = 0;
+
+		    function nextBackground() {
+		        aboutUsDiv.css({
+		            'background': backgrounds[current = ++current % backgrounds.length],'background-position': 'center', 'background-repeat': 'no-repeat',
+		              'transition': 'background 0.5s linear' });
+
+		        setTimeout(nextBackground, 4000);
+		    }
+		    setTimeout(nextBackground, 4000);
+		    aboutUsDiv.css('background', backgrounds[0]);
+		});
 	});
 
 	scotchApp.controller('contactController', function($scope) {
