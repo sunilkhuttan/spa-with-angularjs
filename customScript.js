@@ -12,7 +12,7 @@
 
 // run(1000, 2); //milliseconds, frames
 
-$(function () {
+/*$(function () {
     var body = $('#main-body1');
     var backgrounds = [
       // 'url(assets/images/background/2.jpg)', 
@@ -32,7 +32,7 @@ $(function () {
     }
     setTimeout(nextBackground, 9000);
     body.css('background', backgrounds[0]);
-});
+});*/
 
 $(function () {
     var aboutUsDiv = $('#about-us-pics');
@@ -50,7 +50,7 @@ $(function () {
     function nextBackground() {
         aboutUsDiv.css({
             'background': backgrounds[current = ++current % backgrounds.length],'background-position': 'center', 'background-repeat': 'no-repeat',
-              'transition': 'background 1s linear' });
+              'transition': 'background 0.5s linear' });
 
         setTimeout(nextBackground, 4000);
     }
