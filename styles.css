@@ -224,12 +224,36 @@
   }
 }
 
+.contact-us-map{
+  position: relative;
+  height: 240px;
+  border: 1px solid #970001;
+  padding: 0px;
+}
+
+@media screen and (min-width: 680px) {
+  .contact-us-map{
+    position: relative;
+    height: 480px;
+  }
+}
+
 .data-row{
     margin-bottom: 20px;
 }
 
 .heading-row{
     margin-bottom: 20px;
+}
+
+.no-padding{
+  padding: 0px;
+}
+
+.contact-input{
+  width: 90%; 
+  margin-left: 0.1em; 
+  margin-bottom: 10px;
 }
 
 
