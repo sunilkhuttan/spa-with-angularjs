@@ -256,6 +256,11 @@
   margin-bottom: 10px;
 }
 
+.gallery-btn{
+  margin-bottom: 10px;
+  width: 7em;
+}
+
 
 //Bootstrap Overrides
 .navbar {
