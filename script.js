@@ -102,8 +102,26 @@
 
 	scotchApp.controller('galleryController', function($scope) {
 		$scope.message = 'Contact us! JK. This is just a demo.';
-		$scope.message1 = 'Mobile: 0212154548';
-		$scope.message2 = 'Landline: 0921255422';
+		var galleryImages = $('#gallery-images');
+		//galleryImages.append("<img id='gallery-image' src='assets/images/gallery_pics/small/1.png'/>");
+		var smallGalleryImages = [
+		      'assets/images/gallery_pics/small/1.png', 
+		      'assets/images/gallery_pics/small/2.png',
+		      'assets/images/gallery_pics/small/3.png',
+		      'assets/images/gallery_pics/small/4.png',
+		      'assets/images/gallery_pics/small/5.png',
+		      'assets/images/gallery_pics/small/6.png',
+		      'assets/images/gallery_pics/small/7.png',
+		      'assets/images/gallery_pics/small/8.png',
+		      'assets/images/gallery_pics/small/9.png'];
+
+		function displayImages(images) {
+			for(var i = 0 ; i < images.length; i++)
+			galleryImages.append("<img id='gallery-image"+ i+"' style='margin-bottom : 10px; margin-laft : 10px; margin-right : 10px;' src='" +images[i] + "'/>");
+			$('#gallery-image' + i).css({
+		           'margin': '10px' });
+		}
+		displayImages(smallGalleryImages);
 	});
 
 	scotchApp.controller('teamController', function($scope) {

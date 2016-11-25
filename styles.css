@@ -216,6 +216,7 @@
 #about-us-pics{
     position: relative;
     height: 240px;
+    transition: background 0.5s linear;
 }
 
 @media screen and (min-width: 480px) {
@@ -259,6 +260,13 @@
 .gallery-btn{
   margin-bottom: 10px;
   width: 7em;
+}
+
+
+@media screen and (min-width: 680px) {
+  #gallery-images{
+    padding-left: 10em;
+  }
 }
 
 
