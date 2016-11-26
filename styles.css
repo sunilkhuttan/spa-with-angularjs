@@ -265,7 +265,7 @@
 
 @media screen and (min-width: 680px) {
   #gallery-images{
-    padding-left: 10em;
+    //padding-left: 10em;
   }
 }
 

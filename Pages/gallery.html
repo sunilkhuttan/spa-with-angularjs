@@ -6,24 +6,19 @@
 		 	</center>
 		</div>
 	</div>
-	<div class="row">
-		
-		<div class="col-md-1">
-			<button class="btn btn-default gallery-btn" > All </button>
-			<button class="btn btn-default gallery-btn"> Food </button>
-			<button class="btn btn-default gallery-btn" > Restaurant </button>
-			<button class="btn btn-default gallery-btn"> Dinner </button>
-			<button class="btn btn-default gallery-btn" > Drinks </button>
-			<button class="btn btn-default gallery-btn"> Dessert </button>
+	<center>
+		<!-- buttons row -->
+		<div class="row">		
+			<button class="btn btn-default gallery-btn" id="btn-all-images" ng-click="displayAllImages()"> All </button>
+			<button class="btn btn-default gallery-btn" id="btn-food-images" ng-click="displayfoodImages()"> Food </button>
+			<button class="btn btn-default gallery-btn" id="btn-restaurant-images" ng-click="displayRestaurantImages()"> Restaurant </button>
+			<button class="btn btn-default gallery-btn" id="btn-dinner-images" ng-click="displayDinnerImages()"> Dinner </button>
+			<button class="btn btn-default gallery-btn" id="btn-drinks-images" ng-click="displayDrinksImages()"> Drinks </button>
+			<button class="btn btn-default gallery-btn" id="btn-dessert-images" ng-click="displayDessertImages()"> Dessert </button>		
 		</div>
-		<div class="col-md-11" id="gallery-images" style="padding-left: 50px;" >
-			
-		</div>
-	</div>
-	<!-- <div class="row data-ro" >	
-		 <div class="col-md-3 offset-md-3">.col-md-3 .offset-md-3</div>
-	</div>
-	<div class="row data-ro" >	
+		<!-- append images -->
+		<div class="row" id="gallery-images">
 
-	</div> -->
+		</div>
+	</center>
 </div>

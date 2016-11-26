@@ -1,8 +1,8 @@
-	// create the module and name it scotchApp
-	var scotchApp = angular.module('scotchApp', ['ngRoute']);
+	// create the module and name it restaurantApp
+	var restaurantApp = angular.module('restaurantApp', ['ngRoute']);
 
 	// configure our routes
-	scotchApp.config(function($routeProvider) {
+	restaurantApp.config(function($routeProvider) {
 		$routeProvider
 
 			// route for the home page
@@ -49,12 +49,12 @@
 	});
 
 	// create the controller and inject Angular's $scope
-	scotchApp.controller('mainController', function($scope) {
+	restaurantApp.controller('mainController', function($scope) {
 		// create a message to display in our view
 		$scope.message = 'Everyone come and see how good I look!';
 	});
 
-	scotchApp.controller('aboutController', function($scope) {
+	restaurantApp.controller('aboutController', function($scope) {
 
 		$scope.message = 'Look! I am an about page.';
 		$(function () {
@@ -82,25 +82,25 @@
 		});
 	});
 
-	scotchApp.controller('contactController', function($scope) {
+	restaurantApp.controller('contactController', function($scope) {
 		$scope.message = 'Contact us! JK. This is just a demo.';
 		$scope.message1 = 'Mobile: 0212154548';
 		$scope.message2 = 'Landline: 0921255422';
 	});
 
-	scotchApp.controller('menuController', function($scope) {
+	restaurantApp.controller('menuController', function($scope) {
 		$scope.message = 'Contact us! JK. This is just a demo.';
 		$scope.message1 = 'Mobile: 0212154548';
 		$scope.message2 = 'Landline: 0921255422';
 	});
 
-	scotchApp.controller('reservationController', function($scope) {
+	restaurantApp.controller('reservationController', function($scope) {
 		$scope.message = 'Contact us! JK. This is just a demo.';
 		$scope.message1 = 'Mobile: 0212154548';
 		$scope.message2 = 'Landline: 0921255422';
 	});
 
-	scotchApp.controller('galleryController', function($scope) {
+	restaurantApp.controller('galleryController', function($scope) {
 		$scope.message = 'Contact us! JK. This is just a demo.';
 		var galleryImages = $('#gallery-images');
 		//galleryImages.append("<img id='gallery-image' src='assets/images/gallery_pics/small/1.png'/>");
@@ -114,17 +114,83 @@
 		      'assets/images/gallery_pics/small/7.png',
 		      'assets/images/gallery_pics/small/8.png',
 		      'assets/images/gallery_pics/small/9.png'];
-
-		function displayImages(images) {
-			for(var i = 0 ; i < images.length; i++)
-			galleryImages.append("<img id='gallery-image"+ i+"' style='margin-bottom : 10px; margin-laft : 10px; margin-right : 10px;' src='" +images[i] + "'/>");
-			$('#gallery-image' + i).css({
-		           'margin': '10px' });
+		// This function display the images inside gallery page. It takes images array, number of the image and total number of images
+		function displayImages(images, imageNumber) {
+			var index = 0;
+			var totalImages = images.length + imageNumber;
+			for(var i = imageNumber ; i < (totalImages) ; i++)
+			{
+				galleryImages.append("<img id='gallery-image"+ i+"' style='margin-bottom : 10px; margin-laft : 10px; margin-right : 10px;' src='" +images[index] + "'/>");
+				$('#gallery-image' + i).css({
+		           	'margin': '10px', 'transition': 'background 0.5s linear' });
+				index++;
+			}
 		}
-		displayImages(smallGalleryImages);
+		var allImagesStart = 1;
+		displayImages(smallGalleryImages, allImagesStart);
+
+		$scope.displayAllImages = function(){
+			galleryImages.empty();		
+			displayImages(smallGalleryImages, 1, 9);
+		}
+
+		$scope.displayfoodImages = function(){
+			var imagesStart = 1;
+			galleryImages.empty();
+			var foodImages = [
+				'assets/images/gallery_pics/small/1.png',
+		      	'assets/images/gallery_pics/small/2.png',
+		      	'assets/images/gallery_pics/small/3.png',
+		      	'assets/images/gallery_pics/small/4.png'
+			];
+			displayImages(foodImages, imagesStart )
+		}
+
+		$scope.displayRestaurantImages = function(){
+			var imagesStart = 5;
+			galleryImages.empty();
+			var restaurantImages = [
+				'assets/images/gallery_pics/small/5.png',
+		      	'assets/images/gallery_pics/small/6.png',
+		      	'assets/images/gallery_pics/small/7.png'
+			];
+			displayImages(restaurantImages, imagesStart )
+			
+		}
+
+		$scope.displayDinnerImages = function(){
+			var imagesStart = 5;
+			galleryImages.empty();
+			var dinnerImages = [
+				'assets/images/gallery_pics/small/2.png',
+		      	'assets/images/gallery_pics/small/3.png',
+		      	'assets/images/gallery_pics/small/4.png'
+			];
+			displayImages(dinnerImages, imagesStart )
+			
+		}
+
+		$scope.displayDrinksImages = function(){
+			var imagesStart = 5;
+			galleryImages.empty();
+			var drinkImages = [
+				'assets/images/gallery_pics/small/7.png',
+		      	'assets/images/gallery_pics/small/8.png'
+			];
+			displayImages(drinkImages, imagesStart )			
+		}
+		
+		$scope.displayDessertImages = function(){
+			var imagesStart = 5;
+			galleryImages.empty();
+			var dessertImages = [
+		      	'assets/images/gallery_pics/small/9.png'
+			];
+			displayImages(dessertImages, imagesStart )			
+		}
 	});
 
-	scotchApp.controller('teamController', function($scope) {
+	restaurantApp.controller('teamController', function($scope) {
 		$scope.message = 'Contact us! JK. This is just a demo.';
 		$scope.message1 = 'Mobile: 0212154548';
 		$scope.message2 = 'Landline: 0921255422';
