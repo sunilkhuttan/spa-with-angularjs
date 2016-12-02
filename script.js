@@ -120,9 +120,11 @@
 			var totalImages = images.length + imageNumber;
 			for(var i = imageNumber ; i < (totalImages) ; i++)
 			{
-				galleryImages.append("<img id='gallery-image"+ i+"' style='margin-bottom : 10px; margin-laft : 10px; margin-right : 10px;' src='" +images[index] + "'/>");
+				galleryImages.append(" <div class='col-md-3' id='img-gal' style='-webkit-animation: fadein 2s' ><img id='gallery-image"+ i+"' style='margin-bottom : 10px; margin-laft : 10px; margin-right : 10px; ' src='" +images[index] + "'/> </div>");
+				$('#img-gal').css({'-webkit-animation': 'fadein 2s'});
 				$('#gallery-image' + i).css({
-		           	'margin': '10px', 'transition': 'background 0.5s linear' });
+		           	'margin': '10px', 'transition': 'background 0.5s linear', 'height' : '100%', 'width': '100%', '-webkit-animation': 'fadein 2s' });
+
 				index++;
 			}
 		}
